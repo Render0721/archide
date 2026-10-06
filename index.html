@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>陳連德建築師事務所｜LDC Architects</title>
+<meta name="description" content="陳連德建築師事務所，位於臺中市西屯區。提供透天別墅、集合住宅之建築設計與監造、建造及使用執照申請、建築物鑑定與 BIM 顧問服務。">
+<meta property="og:title" content="陳連德建築師事務所">
+<meta property="og:description" content="精準構築 空間詩意｜臺中市建築師事務所">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1C3A5E; --navy-deep:#132a45; --ink:#333A42; --slate:#6B7684;
+  --mist:#E9EDF1; --paper:#F2EDE6; --bronze:#B08D57; --bronze-soft:#C8A27A; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--white);line-height:1.8;font-size:16px}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* 頁首：左上角事務所名稱 */
+header{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid var(--mist)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:40px;width:auto}
+.brand .name{font-family:"Noto Serif TC",serif;font-weight:700;font-size:22px;color:var(--navy);letter-spacing:.08em;line-height:1.2}
+.brand .en{display:block;font-family:Georgia,serif;font-size:11px;color:var(--slate);letter-spacing:.18em;font-weight:400}
+nav a{margin-left:28px;text-decoration:none;font-size:15px;color:var(--ink)}
+nav a:hover{color:var(--bronze)}
+
+/* 主視覺 */
+.hero{background:var(--navy);color:var(--white);padding:110px 0 100px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-60px;width:520px;height:520px;border:1px solid rgba(200,162,122,.35);transform:rotate(45deg)}
+.hero h1{font-family:"Noto Serif TC",serif;font-size:46px;letter-spacing:.12em;font-weight:700;line-height:1.4}
+.hero .slogan{margin-top:18px;font-size:22px;color:var(--bronze-soft);letter-spacing:.5em}
+.hero p.lead{margin-top:28px;max-width:560px;color:#dfe6ee;font-size:17px}
+.hero .cta{display:inline-block;margin-top:36px;padding:12px 30px;border:1px solid var(--bronze-soft);color:var(--white);text-decoration:none;letter-spacing:.15em}
+.hero .cta:hover{background:var(--bronze-soft);color:var(--navy)}
+
+section{padding:88px 0}
+.label{font-family:Georgia,serif;font-size:13px;letter-spacing:.3em;color:var(--bronze);text-transform:uppercase}
+h2{font-family:"Noto Serif TC",serif;font-size:30px;color:var(--navy);margin:6px 0 28px;letter-spacing:.08em}
+.about{background:var(--paper)}
+.about .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.about blockquote{font-family:"Noto Serif TC",serif;font-size:24px;color:var(--navy);border-left:3px solid var(--bronze);padding-left:20px;line-height:1.7}
+.about p+p{margin-top:14px}
+
+.services .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{border:1px solid var(--mist);padding:30px 28px;border-top:3px solid var(--navy)}
+.card h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+.card ul{list-style:none;color:var(--slate);font-size:15px}
+.card li::before{content:"▪";color:var(--bronze);margin-right:8px}
+
+.process{background:var(--mist)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.step{background:var(--white);padding:22px 18px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Georgia,serif;color:var(--bronze);font-size:22px;display:block;margin-bottom:6px}
+.step h4{color:var(--navy);font-size:17px;margin-bottom:4px}
+.step p{font-size:14px;color:var(--slate);line-height:1.7}
+
+.fee table{width:100%;border-collapse:collapse;font-size:15px}
+.fee th,.fee td{border-bottom:1px solid var(--mist);padding:14px 12px;text-align:left;vertical-align:top}
+.fee th{color:var(--navy);width:28%;font-weight:700}
+.fee .note{margin-top:16px;font-size:14px;color:var(--slate)}
+
+.contact{background:var(--navy);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact dl{display:grid;grid-template-columns:90px 1fr;row-gap:14px}
+.contact dt{color:var(--bronze-soft);letter-spacing:.1em}
+.contact a{color:var(--white)}
+.contact iframe{width:100%;height:280px;border:0;filter:grayscale(.3)}
+
+footer{background:var(--navy-deep);color:#a9b6c4;font-size:13px;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:820px){
+  nav{display:none}
+  .brand .name{font-size:18px}
+  .hero{padding:72px 0}
+  .hero h1{font-size:32px}
+  .hero .slogan{font-size:17px;letter-spacing:.3em}
+  .about .grid,.services .grid,.contact .grid{grid-template-columns:1fr;gap:28px}
+  .steps{grid-template-columns:1fr 1fr}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="陳連德建築師事務所 首頁">
+      <img src="logo.svg" alt="陳連德建築師事務所 LOGO">
+      <span class="name">陳連德建築師事務所<span class="en">LDC ARCHITECTS</span></span>
+    </a>
+    <nav>
+      <a href="#about">關於</a>
+      <a href="#services">服務項目</a>
+      <a href="#process">服務流程</a>
+      <a href="#fee">收費方式</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>陳連德建築師事務所</h1>
+      <div class="slogan">精準構築　空間詩意</div>
+      <p class="lead">從基地評估、建築設計、執照申請到施工監造，以 BIM 精準整合每一個環節，讓設計的心力留給空間與生活。</p>
+      <a class="cta" href="#contact">預約諮詢</a>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap grid">
+      <div>
+        <div class="label">About</div>
+        <h2>關於事務所</h2>
+        <blockquote>體察環境的脈絡，<br>把遺失的連結找回來。</blockquote>
+      </div>
+      <div>
+        <p>陳連德建築師事務所位於臺中市西屯區，由主持建築師陳連德依建築師法開業執業，服務範圍涵蓋私人住宅、集合住宅與公共工程。</p>
+        <p>我們相信建築不只是量體與法規的解答，更要找回人與自然、人與人、人與社會之間被切斷的關係——讓光線、四季與居住者的日常重新連結。</p>
+        <p>事務所全面導入 BIM 建築資訊模型作業，以精準的圖說與數量控管，降低施工變更與溝通成本。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="label">Services</div>
+      <h2>服務項目</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>透天別墅・自地自建</h3>
+          <ul>
+            <li>建築規劃設計與施工監造</li>
+            <li>建造執照、使用執照申請</li>
+            <li>農舍、增建、改建申請</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>集合住宅・開發規劃</h3>
+          <ul>
+            <li>土地開發評估與量體規劃</li>
+            <li>建築設計、都市設計審議</li>
+            <li>建造執照申請與施工監造</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>建築物鑑定</h3>
+          <ul>
+            <li>建築物損鄰、漏水、裂縫鑑定</li>
+            <li>工程爭議與法院囑託鑑定</li>
+            <li>建築法規諮詢</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>BIM 顧問</h3>
+          <ul>
+            <li>Revit BIM 建模與圖說整合</li>
+            <li>事務所 BIM 導入與流程建置</li>
+            <li>數量計算與設計檢討</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="label">Process</div>
+      <h2>服務流程</h2>
+      <div class="steps">
+        <div class="step"><h4>初步諮詢</h4><p>了解需求、基地條件與預算。</p></div>
+        <div class="step"><h4>評估報價</h4><p>法規檢討與量體評估，提出設計費報價。</p></div>
+        <div class="step"><h4>規劃設計</h4><p>平面配置、外觀與細部設計。</p></div>
+        <div class="step"><h4>執照申請</h4><p>建造執照送審、各項審查。</p></div>
+        <div class="step"><h4>施工監造</h4><p>施工查核至使用執照取得。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fee" id="fee">
+    <div class="wrap">
+      <div class="label">Fee</div>
+      <h2>收費方式</h2>
+      <table>
+        <tr><th>建築設計與監造</th><td>依「臺中市建築師公會建築師酬金標準」按工程造價分級計算，簽約後依合約分五期付款。</td></tr>
+        <tr><th>開發評估</th><td>依基地規模與評估內容報價。</td></tr>
+        <tr><th>建築物鑑定</th><td>依鑑定標的、範圍與件數個案報價。</td></tr>
+        <tr><th>BIM 顧問</th><td>依專案規模或顧問時數報價。</td></tr>
+      </table>
+      <p class="note">※ 實際費用依個案條件評估後提供正式報價單。歡迎來電或透過 LINE 洽詢。</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div>
+        <div class="label">Contact</div>
+        <h2>聯絡我們</h2>
+        <dl>
+          <dt>事務所</dt><dd>陳連德建築師事務所</dd>
+          <dt>主持人</dt><dd>陳連德 建築師</dd>
+          <dt>電話</dt><dd><a href="tel:0978307686">0978 307 686</a></dd>
+          <dt>Email</dt><dd><a href="mailto:archide999@gmail.com">archide999@gmail.com</a></dd>
+          <dt>LINE</dt><dd><a href="https://line.me/R/ti/p/@archide" target="_blank" rel="noopener">@archide</a></dd>
+          <dt>地址</dt><dd>臺中市西屯區市政北七路186號20樓之9</dd>
+        </dl>
+      </div>
+      <div>
+        <iframe title="事務所位置地圖" loading="lazy" src="https://www.google.com/maps?q=臺中市西屯區市政北七路186號&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 陳連德建築師事務所　LDC Architects</span>
+    <span>臺中市建築師開業證書 中市建開證字第 M001437 號｜統一編號 95360320</span>
+  </div>
+</footer>
+
+</body>
+</html>
